@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+Flatiron Bank
+Flatiron Bank is a React application for managing transactions. It allows users to add, view, and delete transactions. The application also supports filtering and sorting transactions based on different criteria.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Project Overview
+Features
+Technology Stack
+Getting Started
+Prerequisites
+Installation
+Running the Application
+API Configuration
+Usage
+Adding Transactions
+Viewing Transactions
+Deleting Transactions
+Filtering and Sorting
+Troubleshooting
+Contributing
+License
+Project Overview
+Flatiron Bank is a simple yet effective tool for managing financial transactions. Built with React, it provides a user-friendly interface to manage transactions, with features such as search, filtering, and sorting. The application uses a local JSON server to handle transaction data.
 
-## Available Scripts
+Features
+Add Transactions: Users can add new transactions with details such as description, amount, and category.
+View Transactions: Display a list of all transactions with details such as date, description, amount, and category.
+Delete Transactions: Remove transactions from the list.
+Filter Transactions: Search transactions based on their description.
+Sort Transactions: Sort transactions by date, description, or category.
+Technology Stack
+React: JavaScript library for building user interfaces.
+JSON Server: For mocking a REST API with a local JSON file.
+CSS: For styling the application.
+Getting Started
+Prerequisites
+Before running the application, ensure you have the following installed:
 
-In the project directory, you can run:
+Node.js (v14 or later)
+npm (v6 or later)
+Installation
+Clone the Repository:
 
-### `npm start`
+bash
+Copy code
+git clone https://github.com/Snappyhacker/flatironbank.git
+Navigate to the Project Directory:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+cd flatironbank
+Install Dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+npm install
+Running the Application
+Start the JSON Server:
 
-### `npm test`
+Ensure you have json-server installed globally. If not, install it with:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+npm install -g json-server
+Start the JSON server:
 
-### `npm run build`
+bash
+Copy code
+json-server --watch db.json --port 8001
+This command assumes you have a db.json file in the root directory of your project. If you don't, create one or adjust the command to point to your existing JSON file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the React Application:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+npm start
+This will open the application in your default web browser at http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+API Configuration
+The application fetches transaction data from a JSON server running on http://localhost:8001. Make sure to start the JSON server before running the React application.
 
-### `npm run eject`
+Usage
+Adding Transactions
+Fill out the form in the TransactionForm component with the transaction details.
+Click the "Add Transaction" button to add the transaction to the list.
+Viewing Transactions
+All transactions will be displayed in the TransactionTable component. The table shows details such as date, description, amount, and category.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Deleting Transactions
+Click the "Delete" button next to a transaction in the table to remove it from the list.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Filtering and Sorting
+Filter: Use the search bar to filter transactions by their description.
+Sort: Select a sorting option (date, description, or category) to reorder the transactions accordingly.
+Troubleshooting
+Common Issues
+No Transactions Displayed
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ensure that the JSON server is running on http://localhost:8001 and that it contains valid transaction data. Check the console for any errors and ensure your React application is correctly fetching data from the server.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Transactions Not Added
 
-## Learn More
+Verify that the transaction form is correctly submitting data and that the JSON server is updating the data. Check the network tab in your browser’s developer tools to see if the request to add a transaction is being made.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Errors on Page Load
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you encounter errors related to imports or module resolution, ensure that all dependencies are correctly installed and that file paths are accurate.
 
-### Code Splitting
+Contributing
+Contributions are welcome! To contribute to this project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Fork the repository.
+Create a new branch for your changes.
+Make your changes and test them.
+Submit a pull request with a description of your changes.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
