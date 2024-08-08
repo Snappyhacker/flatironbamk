@@ -42,7 +42,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/Snappyhacker/flatironbank.git
+git clone https://github.com/Snappyhacker/flatironbamk.git
 Navigate to the Project Directory:
 
 bash
